@@ -53,8 +53,6 @@ Work with raw data sources is based on a few simple categories of action.
 - *Analysing* the data once "loaded"
 - *Visualising* particular "views" on the data
 
-Let's look at examples of each.
-
 ---
 
 # Request
