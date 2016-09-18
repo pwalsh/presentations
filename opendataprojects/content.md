@@ -61,7 +61,7 @@ Let's look at examples of each.
 
 A file, a database, a web page.
 
-- [View the notebook](https://github/pwalsh/notebooks/opendataprojects/request.ipynb)
+- [View the notebook](https://github.com/pwalsh/notebooks/opendataprojects/request.ipynb)
 
 ---
 
@@ -69,7 +69,7 @@ A file, a database, a web page.
 
 Glean knowledge from data.
 
-- [View the notebook](https://github/pwalsh/notebooks/opendataprojects/analyse.ipynb)
+- [View the notebook](https://github.com/pwalsh/notebooks/opendataprojects/analyse.ipynb)
 
 ---
 
@@ -77,7 +77,7 @@ Glean knowledge from data.
 
 Share knowledge about the data.
 
-- [View the notebook](https://github/pwalsh/notebooks/opendataprojects/visualise.ipynb)
+- [View the notebook](https://github.com/pwalsh/notebooks/opendataprojects/visualise.ipynb)
 
 ---
 
@@ -85,7 +85,7 @@ Share knowledge about the data.
 
 Make an inquiry using open data.
 
-- [View the notebook](https://github/pwalsh/notebooks/opendataprojects/inquiry.ipynb)
+- [View the notebook](https://github.com/pwalsh/notebooks/opendataprojects/inquiry.ipynb)
 
 ---
 
