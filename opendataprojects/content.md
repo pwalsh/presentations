@@ -13,6 +13,10 @@ class: center, middle
 
 ---
 
+background-image: url(http://a.okfn.org/img/oki/standard-white-334x344.png)
+
+---
+
 # What
 
 - A small workshop for beginners
@@ -103,8 +107,8 @@ If you want to follow up, join a [discussion thread](https://discuss.okfn.org/t/
 
 ---
 
-# Thanks
+class: center, middle
 
-- Paul Walsh, Head of Technical Product at Open Knowledge International
+# Thanks
 
 [https://okfn.org](https://okfn.org) | [http://pwalsh.me](http://pwalsh.me)
