@@ -63,7 +63,7 @@ Work with raw data sources is based on a few simple categories of action.
 
 A file, a database, a web page.
 
-- [View the notebook](https://github.com/pwalsh/notebooks/opendataprojects/request.ipynb)
+- [View the notebook](https://github.com/pwalsh/notebooks/tree/master/opendataprojects/request.ipynb)
 
 ---
 
@@ -71,7 +71,7 @@ A file, a database, a web page.
 
 Glean knowledge from data.
 
-- [View the notebook](https://github.com/pwalsh/notebooks/opendataprojects/analyse.ipynb)
+- [View the notebook](https://github.com/pwalsh/notebooks/tree/master/opendataprojects/analyse.ipynb)
 
 ---
 
@@ -79,7 +79,7 @@ Glean knowledge from data.
 
 Share knowledge about the data.
 
-- [View the notebook](https://github.com/pwalsh/notebooks/opendataprojects/visualise.ipynb)
+- [View the notebook](https://github.com/pwalsh/notebooks/tree/master/opendataprojects/visualise.ipynb)
 
 ---
 
@@ -87,15 +87,15 @@ Share knowledge about the data.
 
 Make an inquiry using open data.
 
-- [View the notebook](https://github.com/pwalsh/notebooks/opendataprojects/inquiry.ipynb)
+- [View the notebook](https://github.com/pwalsh/notebooks/tree/master/opendataprojects/inquiry.ipynb)
 
 ---
 
 # Next
 
-- [Ideas for your own open data projects with Python](https://github.com/pwalsh/notebooks/opendataprojects/README.md#ideas)
-- [A small sample of open data resources](https://github.com/pwalsh/notebooks/opendataprojects/README.md#resources)
-- [Troubleshooting common problems](https://github.com/pwalsh/notebooks/opendataprojects/README.md#troubleshooting)
+- [Ideas for your own open data projects with Python](https://github.com/pwalsh/notebooks/tree/master/opendataprojects/README.md#ideas)
+- [A small sample of open data resources](https://github.com/pwalsh/notebooks/tree/master/opendataprojects/README.md#resources)
+- [Troubleshooting common problems](https://github.com/pwalsh/notebooks/tree/master/opendataprojects/README.md#troubleshooting)
 
 ---
 
