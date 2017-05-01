@@ -1,3 +1,8 @@
+#+OPTIONS: toc:nil
+#+OPTIONS: num:nil
+#+OPTIONS: reveal_center:nil
+#+REVEAL_THEME:black
+#+REVEAL_EXTRA_CSS: /assets/extra.css
 * Open Data and the Question of Quality
 ** Who
 ** Where
