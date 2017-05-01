@@ -1,0 +1,11 @@
+@import url("vendor/font-awesome/css/font-awesome.min.css");
+
+.reveal section img {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+i.fa {
+    font-size: 200px;
+}
