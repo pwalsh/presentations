@@ -528,7 +528,7 @@ The bottom line is, without a simple, solid foundation of *structural integrity*
 #+BEGIN_NOTES
 
 1. I'm a big fan of all of these things, and actively working on some (data standards). I'm also a big fan of scoping and iterative progress. These are nice things that we can't have yet.
-2. Some of this is better done by domain experts or towards specific ends (e.g.: OpenSpedning and fiscal data). Generic code list and linking solutions are bound to fall short for a great many use cases.
+2. Some of this is better done by domain experts or towards specific ends (e.g.: OpenSpending and fiscal data). Generic code list and linking solutions are bound to fall short for a great many use cases.
 3. Solutions to these non-goals are inherently technical (part of their appeal to some). Classic case of engineering solving a problem. Just yesterday XKCD published a comiic on this tendency. I think we are seeing the same type of thing with some approaches around Linked Open Data.
 
 ------
@@ -592,7 +592,7 @@ We can't do this only by coding software. We can develop some solutions in softw
 *** 
 
 - Engage in direct dialogue with government on the usability of open data
-- Build quality metrics into the tools and processes that incentivise government
+- Build quality metrics into the processes that incentivise government
 - In some situations, outright reject data as open data based on quality grounds alone
 
 #+BEGIN_NOTES
