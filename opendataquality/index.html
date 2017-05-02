@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<meta name="author" content="(Paul Walsh)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="/assets/vendor/reveal/css/reveal.css"/>
+
+<link rel="stylesheet" href="/assets/vendor/reveal/css/theme/black.css" id="theme"/>
+
+<link rel="stylesheet" href="/assets/extra.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/assets/vendor/reveal/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section>
+<section id="slide-org80a5e07">
+<h2 id="org80a5e07">Open Data and the Question of Quality</h2>
+<i class="fa fa-archive" aria-hidden="true"></i>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<p>
+Published title:
+</p>
+
+<p>
+"What's next in open data? The limits of the publication discourse"
+</p>
+
+<p>
+Blurb:
+</p>
+
+<p>
+In 2017, discourse around open data still revolves around publication of open data. While clearly important, it is like talking about building roads without thought towards their ability to facilitate transport. We need a radical shift in discourse towards data quality in order to facilitate the ability to use open data.
+</p>
+
+<p>
+The talk will cover a little history to show the historical forces that got us to where we are today - lots of open data portals full of barely reusable data, and present a vision for where we need to be and how we could get there, in order for open data to truly fulfil its promise as a channel of empowerment.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf4e5b11">
+<h2 id="orgf4e5b11">Open Knowledge International</h2>
+
+<div class="figure">
+<p><img src="./assets/oki.png" alt="oki.png" width="200px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org9c09da7">
+<h3 id="org9c09da7"></h3>
+<p>
+Open up all essential, public interest information and see it used to create insight that drives positive change.
+</p>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>Why I am talking about open data quality</li>
+<li>What my role is in open data and with OKI (Product: tech / specs)</li>
+<li>What OKI's role is in open data (Open Definition, CKAN, others)</li>
+
+</ol>
+
+<hr />
+
+<p>
+If we are going to talk about open data and the question of quality, Let's first briefly discuss why the quality of open data is important to me.
+</p>
+
+<ul>
+<li>I'm the <b>Chief Product Officer</b> at Open Knowledge International [ <a href="https://okfn.org">https://okfn.org</a> ]</li>
+
+<li>Open Knowledge International, founded by Rufus Pollock in 2004, has a history deeply intwined with open data as we understand it today.</li>
+
+<li>We've both led, and been deeply involved in, a number of key efforts around the open data space:
+
+<ul>
+<li><b>Open Definition</b> [ <a href="http://opendefinition.org">http://opendefinition.org</a> ]: The Open Definition sets out principles that define “openness” in relation to data and content.</li>
+
+<li><b>CKAN</b> [ <a href="https://ckan.org">https://ckan.org</a> ]: The first and leading open data portal, used by governments and other publishing bodies around the world.</li>
+
+<li><b>Global Open Data Index</b> [ <a href="http://index.okfn.org">http://index.okfn.org</a> ]: Measuring the openness of goverments by way of their open data publication.</li>
+
+<li>A range of other open source apps, libraries and platforms for open data, like:
+<ul>
+<li><b>Frictionless Data</b> [ <a href="https://frictionlessdata.io">https://frictionlessdata.io</a> ]</li>
+<li><b>OpenSpending</b> [ <a href="https://openspending.org">https://openspending.org</a> ]</li>
+<li><b>OpenTrials</b> [ <a href="https://explorer.opentrials.net">https://explorer.opentrials.net</a> ]</li>
+
+</ul></li>
+
+</ul></li>
+
+<li>We love open data, and most importantly, want to see it drive change in the world. This is important to the context of the talk around publication and quality.</li>
+
+<li>Me, I'm a hacker with a background in anthropology</li>
+
+</ul>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-orgd9c116f">
+<h2 id="orgd9c116f">This talk</h2>
+<i class="fa fa-road" aria-hidden="true"></i>
+
+</section>
+<section id="slide-org3ac95bd">
+<h3 id="org3ac95bd"></h3>
+<ul>
+<li>The open data ecosystem is almost exclusively about publication</li>
+<li>This focus on publication is now minimising the impact of open data</li>
+<li>To meet the promise of open data, we need to focus on data quality</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>Summary of the talk flow</li>
+<li>Listeners can get context / what to expect</li>
+
+</ol>
+
+<hr />
+
+<p>
+Here I want to paint in broad strokes what I essentially want to say over the next 20 minutes.
+</p>
+
+<ul>
+<li><b>show</b> the focus on publication?</li>
+
+<li><b>how</b> does it minimise impact?</li>
+
+<li><b>why</b> do we need to shift the focus to data quality?</li>
+
+</ul>
+
+<p>
+We are going to now look at this in more detail.
+</p>
+
+<p>
+Looked at like this, it may seem obvious or evident, but we'll see in fact that what is happening with open data right now is far from this.
+</p>
+
+</aside>
+
+</section>
+<section id="slide-orgfe00582">
+<h3 id="orgfe00582"></h3>
+<ul>
+<li>Some ideas to think about technology of "what's next" (because most of us here are technologists)</li>
+<li>Some concrete actions you can take in front of your local public bodies that publish open data</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>The talk is oriented towards action.</li>
+<li>Tech action, in terms of tools to build and the goal we are aiming for.</li>
+<li>Non-tech action in terms of pressuring publishing bodies.</li>
+
+</ol>
+
+<hr />
+
+<p>
+If I've done my job well enough, this is what you should come out of the talk with - not only listening to some person's opinion about open data, but a set of actions.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org32f28a8">
+<h2 id="org32f28a8">Definitions</h2>
+<i class="fa fa-map-signs" aria-hidden="true"></i>
+
+</section>
+<section id="slide-orgab440e8">
+<h3 id="orgab440e8"></h3>
+<blockquote nil>
+<p>
+Open data is digital data that is made available with the technical and legal characteristics necessary for it to be freely used, reused, and redistributed by anyone, anytime, anywhere.
+<a href="http://opendatacharter.net/principles/">Open Data Charter</a>
+</p>
+</blockquote>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>We have a clear definition of what open data is.</li>
+<li>The definition I am using is from the Open Data Charter. It is in turn based on earlier work from OKI and others on the Open Definition.</li>
+<li>While the definition applies to data in general, it is still mostly used in the context of government data. This is changing (Open Trials example), but the examples in this talk are also related to government data.</li>
+
+</ol>
+
+<hr />
+
+<p>
+Before we talk about the state of open data, and open data quality, we need to define what we mean by open data.
+</p>
+
+<p>
+<b>Open Definition</b> <a href="http://opendefinition.org">http://opendefinition.org</a>
+</p>
+
+<p>
+"Open data and content can be freely used, modified, and shared by anyone for any purpose"
+</p>
+
+<p>
+"The Open Definition makes precise the meaning of “open” with respect to knowledge, promoting a robust commons in which anyone may participate, and interoperability is maximized."
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org44675e6">
+<h2 id="org44675e6">Is it important?</h2>
+<i class="fa fa-snowflake-o" aria-hidden="true"></i>
+
+</section>
+<section id="slide-org15bd3fd">
+<h3 id="org15bd3fd"></h3>
+<ul>
+<li>It's our data</li>
+<li>A type of accountability</li>
+<li>New types of participatory cultures</li>
+<li>Insight -&gt; change in the world</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>Let's stop here for a second and ask: Why is Open Data important?</li>
+<li>Our governments should be accountable to us. Publishing data on what they do is an important form of accountability.</li>
+<li>Open data, on top of infrastructure like the Internet, feeds new participatory cultures. Activists, NGOs, businesses, etc.</li>
+
+</ol>
+
+<hr />
+
+<p>
+From the Open Data Charter <a href="http://opendatacharter.net/principles/">http://opendatacharter.net/principles/</a> :
+</p>
+
+<p>
+"Open data enables governments, citizens, and civil society and private sector organizations to make better informed decisions"
+</p>
+
+<p>
+"We, the adherents to the International Open Data Charter, recognize that governments and other public sector organizations hold vast amounts of data that may be of interest to citizens, and that this data is an underused resource. Opening up government data can encourage the building of more interconnected societies that better meet the needs of our citizens and allow innovation, justice, transparency, and prosperity to flourish, all while ensuring civic participation in public decisions and accountability for governments."
+</p>
+
+<p>
+"Open data allows user to compare, combine, and follow the connections among different datasets, tracing data across a number of programs and sectors. When data can be effectively combined and compared, it can help highlight trends, identify social and economic challenges and inequities, and benchmark progress in public programs and services."
+</p>
+
+
+<p>
+So, one thing is clear: it is important, but not in and of itself. Open data is a means to an end. open data is important in correspondenence with the change it can affect in the world.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org06c2745">
+<h2 id="org06c2745">Where are we now?</h2>
+<i class="fa fa-globe" aria-hidden="true"></i>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>Open data movement is an established ecosystem or "industry".</li>
+<li>Governments are eager to tie open data into their transparency efforts.</li>
+<li>While this growth is a net positive, there are troubling issues with open data quality that are not being addressed at the government level (still pre-ccupied with publication, and the ecosystem incentivises this).</li>
+
+</ol>
+
+<hr />
+
+<p>
+It's 2017 and we are 10 years in to open data. Over that time, an entire movement has established itself with reference to government data specifically, but also a more general idea of open data. Of course, refering to this time from does not mean all data was "closed" before this period.
+</p>
+
+<p>
+However, the digital economy afforded by the World Wide Web and other technological advancements truly gave rise to an entity and concept in its own right, one that is now represented via a range of CSOs, coalitions like the Open Government Partnership, and initiatives like the Open Data Charter.
+</p>
+
+<p>
+Is open data as a concept and a force healthy? Is the promise of open data being fulfilled? Can we see clearly where open data needs to go?
+</p>
+
+</aside>
+
+</section>
+<section id="slide-orgf73d41c">
+<h3 id="orgf73d41c">Field</h3>
+<ul>
+<li>Freedom of Information (FOI)</li>
+<li>Publication and the open data portal</li>
+<li>Transparency initiatives and open data</li>
+<li>Meta-national partnerships and alliances</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>Freedom of information acts in many juristrictions are a critical tool for actors to get data from governments. Implements the notion of the citizen right to data.</li>
+<li>Many governments proactively publish data via portals. Portals are therefore a major interface for civil society to access open data. (history with data.gov.uk and data.gov)</li>
+<li>Open data has been closely tied to the notion of government transparency. Data often functions as a signifier of transparency.</li>
+<li>The "industry" engaging with government via generic action, as opposed to earlier more localised/specific actions.</li>
+
+</ol>
+
+<hr />
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Freedom_of_information_laws_by_country">https://en.wikipedia.org/wiki/Freedom_of_information_laws_by_country</a>
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org0256cf5">
+<h3 id="org0256cf5">Actors</h3>
+<ul>
+<li>NGOs</li>
+<li>Civic tech</li>
+<li>Governments</li>
+<li>Philanthropists</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<p>
+Open Knowledge International, Open Data Institute, Sunlight Foundation, Transparency International
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org847defd">
+<h3 id="org847defd">Metrics / Incentives</h3>
+
+<div class="figure">
+<p><img src="./assets/godi.png" alt="godi.png" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<p>
+<a href="http://index.okfn.org">http://index.okfn.org</a>
+</p>
+
+<ol>
+<li>Crowdsourced "assessment by the people, for the people".</li>
+<li><b>Lots</b> of government interest. Directly influences transparency policies.</li>
+<li>Focussed on publication and access. (good things!)</li>
+
+</ol>
+
+</aside>
+
+</section>
+<section id="slide-orge2d0172">
+<h3 id="orge2d0172">Metrics / Incentives</h3>
+
+<div class="figure">
+<p><img src="./assets/bar.png" alt="bar.png" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<p>
+<a href="http://opendatabarometer.org">http://opendatabarometer.org</a>
+</p>
+
+<ol>
+<li>Government self assessment.</li>
+<li>Peer-reviewed expert survey.</li>
+<li>Secondary data from other sources (e.g.: World Bank).</li>
+
+</ol>
+
+</aside>
+
+</section>
+<section id="slide-org4ec6637">
+<h3 id="org4ec6637">Metrics / Incentives</h3>
+
+<div class="figure">
+<p><img src="./assets/ogp.png" alt="ogp.png" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<p>
+<a href="https://www.opengovpartnership.org">https://www.opengovpartnership.org</a>
+</p>
+
+<ol>
+<li>Eligibility based on access to, and timely publication of, some types of data (fiscal, asset disclosure).</li>
+<li>National Action Plan in conjunction with civil society.</li>
+<li>Self-assessment and the Independent Report Mechanism.</li>
+
+</ol>
+
+</aside>
+
+</section>
+<section id="slide-org926ec61">
+<h3 id="org926ec61">Metrics / Incentives</h3>
+
+<div class="figure">
+<p><img src="./assets/odc.png" alt="odc.png" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<p>
+<a href="http://opendatacharter.net">http://opendatacharter.net</a>
+</p>
+
+<ol>
+<li>A set of principles for access, release and use of data.</li>
+<li>Adoption via a high-level public statement.</li>
+
+</ol>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org1075c44">
+<h2 id="org1075c44">What we don't see</h2>
+<i class="fa fa-eye-slash" aria-hidden="true"></i>
+
+</section>
+<section id="slide-org456d444">
+<h3 id="org456d444"></h3>
+<ul>
+<li>We don't measure the usability of open data</li>
+<li>We don't expect open data to be of high quality</li>
+<li>We don't incentivise government to strive for impact (reuse, insight, change)</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>There is little emphasis by the actors in the field of open data on usability. The discourse around publication actually deemphaises usability.</li>
+<li>Civic tech barely expects open data to be of high quality. Data wrangling to simply use public data is normal.</li>
+<li>No one asks governments to measure their success via action on the world.</li>
+
+</ol>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org9ab3929">
+<h2 id="org9ab3929">Studies</h2>
+<i class="fa fa-book" aria-hidden="true"></i>
+
+</section>
+<section id="slide-org3133e49">
+<h3 id="org3133e49"></h3>
+<ul>
+<li>Who are the users of open data?</li>
+<li>What are their user experiences?</li>
+<li>What can we learn about data quality?</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<p>
+Civic tech and open data organisations are the primary users of open data
+</p>
+
+</aside>
+
+</section>
+<section id="slide-orga00428d">
+<h3 id="orga00428d">UK spend data</h3>
+
+<div class="figure">
+<p><img src="./assets/uk-25k.png" alt="uk-25k.png" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>Position of UK in open data and transparency.</li>
+<li>Particularly clear requirements and a willing, capable and funded team internally.</li>
+<li>A mixture of automated and manually generated data. Decentralised data collection and publication.</li>
+
+</ol>
+
+<hr />
+
+<p>
+In late 2014, I worked on a project at OKI in collaboration with <a href="https://www.gov.uk/government/organisations/cabinet-office/about">Cabinet Office</a> around measuring the UK government's transparency efforts around spending. Many of the core tools that are now part of the Frictionless Data toolchain came out of this work.
+</p>
+
+<p>
+A primary goal was to look at spend publishing, particularly data we referred to as the UK "25k" data, check the quality of the data published, and build a dashboard for internal stakeholders to see and measure their own fiscal transparency and data publication status.
+</p>
+
+<p>
+The "25k" data is interesting for a number of reasons.
+</p>
+
+<p>
+For one, the data covers a wide range of administrative departments across central government, detailing their spending on any items with a value of over £25,000.
+</p>
+
+<p>
+More interestingly, the publication of this data was a top-down initiative, stemming from an order by the Prime Minister in May 2010 that each department will have a minister responsible for transparency, and that this was tied directly to accountaibility and driving down costs.
+</p>
+
+<p>
+As part of this initiative, the government made a commitment to publish details of all expenditure over £25,000, and the giveronment released fairly detailed and clear guidance for how this data was to be published. Read more on this <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/198197/Guidance_for_publishing_spend_over__25k.pdf">here</a>.
+</p>
+
+<p>
+Here we have an example of:
+</p>
+
+<ul>
+<li>A requirement to publish open data</li>
+<li>A need driven by transparency and accountability narratives</li>
+<li>Clear, simple information for all departments on how to prepare and release this data</li>
+<li>Data that has a "standard" -  a very explicit description of the fields and type of data to be released (see an extraction of this standard from the above linked document <a href="https://gist.github.com/pwalsh/a9f7f0796229d0566191">here</a>).</li>
+
+</ul>
+
+<p>
+So, just how good is the data?
+</p>
+
+<p>
+Our scripts for collecting and processing the data, as well as copies of the data, can be found on <a href="https://github.com/okfn/data-quality-uk-25k-spend">Github</a>. <a href="https://github.com/okfn/data-quality-uk-25k-spend/blob/master/README.md">The README.md</a> file contains a detailed description of what we did, how we defined "data quality" in this context, and explains to process by which we acquired the data.
+</p>
+
+
+<p>
+Note that the quality problems start with the discoverability of the data itself. There is no way via any UK government portal to simply collect all this data via an existing taxonomy. We had to write custom code on top of the CKAN search API (data.gov.uk runs on CKAN) to try to find all UK25k data. Logic for this can be found in <a href="https://github.com/okfn/data-quality-uk-25k-spend/blob/master/scripts/id_data.py#L292">this function</a> and other functions in <a href="https://github.com/okfn/data-quality-uk-25k-spend/blob/master/scripts/id_data.py">this module</a>.
+</p>
+
+<p>
+However, our story, today, is not about the discoverability of the data as such, but the quality of the data itself.
+</p>
+
+<p>
+To get to the point, we have a display of the latest results available on an instance of our <a href="http://uk-25k.herokuapp.com">Data Quality Dashboard for this data</a>. By the scoring system we used, less than 1% (rounded to 0) of the data meets the UK governments own quality standards for this data.
+</p>
+
+<p>
+Here is an <a href="http://goodtables.okfnlabs.org/reports?data_url=https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/532146/dwp-payments-over-25000-for-may-2016.csv&amp;format=csv&amp;encoding=&amp;schema_url=https://raw.githubusercontent.com/okfn/goodtables/master/examples/hmt/spend-publishing-schema.json">example of the errors found</a>, in a file for May 2016 from the Depaertment of Work and Pensions. You can find similar errors elsewhere.
+</p>
+
+<p>
+We should allow for some margin of error in our analysis. As we've said - it is not possible to deterministically get all UK25k data by each department.
+</p>
+
+<p>
+It is possible that some data is available on other UK data portals (not data.gov.uk), it is possible that we could not find some data (due to the way we have to use search queries to discover data), it is possible we'veerroneously identified some data (ditto), and so on.
+</p>
+
+<p>
+By analysing the errors that persist over this data, one sees patterns that are common fodder for civic tech data wranglers:
+</p>
+
+<ul>
+<li>columns with inconsistent data (example: strings in data columns)</li>
+<li>blank rows</li>
+<li>non-tabular data at the beginning and end of files</li>
+<li>inconsistent header naming</li>
+
+</ul>
+
+</aside>
+
+</section>
+<section id="slide-org26e4fde">
+<h3 id="org26e4fde"></h3>
+<ul>
+<li>A global leader in open data publication</li>
+<li>A case with a clear edict of requirements</li>
+<li>A simple and explicit "standard" to publish to</li>
+
+</ul>
+
+</section>
+<section id="slide-org69cad6e">
+<h3 id="org69cad6e"></h3>
+<ul>
+<li>% of valid files rounds to zero</li>
+<li>Issues of file structure and schema</li>
+<li>Issues of timeliness (or, discoverability - take your pick)</li>
+
+</ul>
+
+</section>
+<section id="slide-org737ebe8">
+<h3 id="org737ebe8"></h3>
+<ul>
+<li><a href="http://uk-25k.datadashboards.io">UK 25k Data Quality Dashboard</a></li>
+<li><a href="https://github.com/okfn/data-quality-uk-25k-spend">Collected data and processing scripts</a></li>
+<li><a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/198197/Guidance_for_publishing_spend_over__25k.pdf">Official guidance from HMT for publishing spend</a></li>
+
+</ul>
+
+</section>
+<section id="slide-org8cf1215">
+<h3 id="org8cf1215">EU subsidy data</h3>
+
+<div class="figure">
+<p><img src="./assets/sseu.png" alt="sseu.png" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>How easy is it to build an app using EU fiscal data?</li>
+<li>Data wrangling (hundreds of ETL pipelines, radically inconsistent data, even in single files).</li>
+<li>Time and effort - the cost of "open data publication" at this quality.</li>
+
+</ol>
+
+<hr />
+
+<p>
+<a href="https://okfn.de/blog/2017/04/Making-EU-Data-Open/">https://okfn.de/blog/2017/04/Making-EU-Data-Open/</a>
+</p>
+
+<p>
+In 2016, we undertook a project with Open Knowledge Germany to bring together a large subsection of EU subsidy data, and centralise it into the OpenSpending database for deeper analysis. 
+</p>
+
+<p>
+We knew this was not a small job: there are data standards and regulations at the EU for the publication of this data, but there are not consistently adhered to. We set out to identify and source around 140 different datasets, across a range of regional data portals. Like wit the UK example, the data quality issues already start at the discovery stage - it is a significant amount of work just to <b>identify</b> where this "open data" can be found. 
+</p>
+
+<p>
+In this "data sourcing" stage we experienced the next step of data quality - while the data is supposed to be published in open data formats, much wasn't. In the end we extracted data from formats X, Y, and Z, and from over X different data portals across Europe. 
+</p>
+
+</aside>
+
+</section>
+<section id="slide-orgf733703">
+<h3 id="orgf733703"></h3>
+<ul>
+<li>Clear publication requirements via an EU regulation</li>
+<li>Centralised entiy (EU) paying out across multiple regions (comparability opportunity)</li>
+<li>Huge investments by EU in open data and related tech (H2020 and similar programs)</li>
+
+</ul>
+
+</section>
+<section id="slide-org85b74c0">
+<h3 id="org85b74c0"></h3>
+<ul>
+<li><a href="http://subsidystories.eu">Subsidy Stories EU app</a></li>
+<li><a href="https://github.com/os-data/eu-structural-funds/">Data collection and processing code</a></li>
+<li><a href="http://openbudgets.eu/assets/resources/Report-OpenBudgets-ESIF%20Data-Quality-Index.pdf">Data quality report</a></li>
+
+</ul>
+
+</section>
+<section id="slide-org446a306">
+<h3 id="org446a306">Others</h3>
+</section>
+<section id="slide-org819d1ce">
+<h3 id="org819d1ce"></h3>
+<blockquote nil>
+<p>
+When released, data is not always useful and useable&#x2026;. Only France published the majority of its datasets in line with open data standards. - from <a href="https://www.transparency.org/news/feature/open_data_promise_but_not_enough_progress_from_g20_countries">Open Data: Promise but not enough progress</a> by Transparency International
+</p>
+</blockquote>
+
+</section>
+<section id="slide-org97d85e9">
+<h3 id="org97d85e9"></h3>
+<blockquote nil>
+<p>
+&#x2026; cities &#x2026; put out more data with lower usability (because metadata isn’t available, or is of poor quality) &#x2026; [and] &#x2026; undermine cities’ ability to deliver on open data’s transparency-driven mission. - from <a href="http://datasmart.ash.harvard.edu/news/article/an-open-letter-to-the-open-data-community-988">An Open Letter to the Open Data Community</a> by Data Smart City Solutions
+</p>
+</blockquote>
+
+</section>
+<section id="slide-orgdb9bb6b">
+<h3 id="orgdb9bb6b"></h3>
+<blockquote nil>
+<p>
+&#x2026; we recommend that &#x2026; data quality is increased to the legally mandated minimum throughout Europe. &#x2026; governments should introduce centralised control mechanisms and <b>penalties for non-compliance</b>. - from <a href="https://opentender.eu/blog/2017-03-recommendations-for-implementation/#guide7">Towards more transparent and efficient contracting</a> by Digiwhist
+</p>
+</blockquote>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<hr />
+
+<p>
+<a href="https://github.com/datagovuk/spend-prototype#etl-scripts">https://github.com/datagovuk/spend-prototype#etl-scripts</a>
+</p>
+
+<p>
+"&#x2026;4,606,759 transactions. A few hundred thousand not imported due to failures in formatting. Over 1000 original pages, we ended up with 1,1993 CSV files."
+</p>
+
+<p>
+<a href="http://blog.nkb.fr/data-free">http://blog.nkb.fr/data-free</a> : 
+</p>
+
+<p>
+"Sometimes, no data is better than bad data."
+</p>
+
+<p>
+"Being able to access bogus data is pointless. What is needed to make sense of the world around us is better data, free from government interference. To be free to contextualize news, free to interpret events and free to think independently, we need independently collected data.
+</p>
+
+<p>
+This is important because good information is a prerequisite for the bureaucracy to run properly. Removing good data is like removing the foundations of our administrations. And this is already happening."
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org956ee52">
+<h2 id="org956ee52">Learnings</h2>
+<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+
+</section>
+<section id="slide-org6a3a0d9">
+<h3 id="org6a3a0d9"></h3>
+<ul>
+<li>Governments leading on open data cannot publish consistent CSV files</li>
+<li>Standards and regulations do not lead to quality, reusable data</li>
+<li>Huge amounts of time and money are required to get to insight</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>The EU and the UK spend huge amount of money on transparency and on open data, including investment in highly technical solutions like Linked Data.</li>
+<li>Many voices from both civil society and government argue for standards, but our studies here shown that standards for data publication don't correlate with quality. Different problems.</li>
+<li>Most painful (for me), this all deeply impacts the ability to generate insight from and with open data. Vast amounts of opportunities are lost, as resources are channeled to much more mundane data processing tasks. This also significantly raises the barrier to entry</li>
+
+</ol>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org478d938">
+<h2 id="org478d938">Quality</h2>
+<i class="fa fa-star" aria-hidden="true"></i>
+
+</section>
+<section id="slide-org157551c">
+<h3 id="org157551c">What do we want?</h3>
+<blockquote nil>
+<p>
+(W)e want the data raw, and we want the data now - from <a href="https://blog.okfn.org/2007/11/07/give-us-the-data-raw-and-give-it-to-us-now/">Give Us the Data Raw, and Give it to Us Now</a> by Rufus Pollock
+</p>
+</blockquote>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>Rufus Pollock, Founder of OKI, famously said in 2007 that we want the raw data and we want the data now.</li>
+<li>10 years later, yes, give us the raw data if that is all you have. But, we need to be proactive in demanding more.</li>
+<li>We can't only incentivise governments for raw publication and access. We need to incentivise data quality, towards actual insight and change.</li>
+
+</ol>
+
+</aside>
+
+</section>
+<section id="slide-org6cfcdd5">
+<h3 id="org6cfcdd5">Goals</h3>
+<ul>
+<li>plain text data</li>
+<li>structural integrity</li>
+<li>schematic consistency</li>
+<li>timely release</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<p>
+In reaching for quality, we need to understand the essential foundations, and not introduce layers of complexity that delay and even prevent publication.
+</p>
+
+<p>
+Note that here the foundations I'm claiming are simpler than those implied by the Open Data Charter, which talks about higher-level concepts such as "linkability" and "comparability". DEFRA in the UK government also publishes some open data principles along the same lines.
+</p>
+
+<p>
+I'm concerned that these focus too much on the concepts and technology of Linked Data, and miss out on a more foundational step.
+</p>
+
+<p>
+Also, these types of declarations and principles are almost exclusively concerned with the consumption of open data, largely ignoring the production of open data. This has implications related to the technologising of solutions, that I'll talk about shortly.
+</p>
+
+<p>
+The bottom line is, without a simple, solid foundation of <b>structural integrity</b>, <b>schematic consistency</b>, and <b>timely release</b>, we will not meet quality standards higher up in the chain.
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org7988f46">
+<h3 id="org7988f46">Non-goals</h3>
+<ul>
+<li>Fixed data standards</li>
+<li>Common code lists</li>
+<li>Automated comparision</li>
+<li>Linkage across datasets</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>I'm a big fan of all of these things, and actively working on some (data standards). I'm also a big fan of scoping and iterative progress. These are nice things that we can't have yet.</li>
+<li>Some of this is better done by domain experts or towards specific ends (e.g.: OpenSpedning and fiscal data). Generic code list and linking solutions are bound to fall short for a great many use cases.</li>
+<li>Solutions to these non-goals are inherently technical (part of their appeal to some). Classic case of engineering solving a problem. Just yesterday XKCD published a comiic on this tendency. I think we are seeing the same type of thing with some approaches around Linked Open Data.</li>
+
+</ol>
+
+<hr />
+
+<p>
+I am a big fan of all of these things. We should, as an ecosystem, be moving towards these things consistently. However, they should be based only on the previous foundations.
+</p>
+
+<p>
+All of these things take us away from basic plain text publication of data, and introduce complexities via increased dependance on <b>technology</b> and <b>domain knowledge</b>.
+</p>
+
+<p>
+We need to have essential quality assurances in plain text publication of data first, for data that is published via manual and automated means.
+</p>
+
+<p>
+Why we should work to all of these on top of the previous foundations:
+</p>
+
+<ul>
+<li><b>Data standards</b>: Technologists love standards (me too! I work on a few). Data can be published and standardaized without standards (FDP example).</li>
+
+<li><b>Code lists</b>: Technologists love code lists.
+<ul>
+<li>Most humans have no idea what we are talking about. (problem of complexity in production.)</li>
+<li>Almost all data cannot be mapped 1:1 to common code lists. (problem of compelxity related to regulation, law, and so on.)</li>
+
+</ul></li>
+
+<li><b>Comparison</b>: Comparison is extremely hard across even very similar datasets. (example: of muni fiscal data and changes across entities - different usage of same code - and over time,)</li>
+
+<li><b>Linkage</b>: Things not strings is a common phrase used by Linked Data proponents. We are all working towards this, but it is again incredibly domain specific. Similar end goals can be achieved through simpler quality mechanisms.</li>
+
+</ul>
+
+<p>
+Lastly, a lot of this comes out of context: data published tp the basic quality foundations above allows domain experts to do these things in more specific and granular ways, for their goals.
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org8f889af">
+<h4 id="org8f889af">xkcd.com/1831/</h4>
+
+<div class="figure">
+<p><img src="./assets/xkcd.com_1831.png" alt="xkcd.com_1831.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org3083ef1">
+<h2 id="org3083ef1">Action</h2>
+<i class="fa fa-universal-access" aria-hidden="true"></i>
+
+</section>
+<section id="slide-orgfe9dc8d">
+<h3 id="orgfe9dc8d"></h3>
+<p>
+What can we do to get governments to publish quality open data?
+</p>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>I'm not here solely to complain about the current situation of open data!</li>
+<li>Governments need us, the consumers of their open data, to be vocal and guiding in increasting the quality of open data.</li>
+<li>This is not a problem space with a purely technological solution.</li>
+
+</ol>
+
+<hr />
+
+<p>
+What actions can we, open data activists, hackers, and so on, take now to get governments to publish quality open data?
+</p>
+
+<p>
+I don't believe in technical solutions to issues that are socio-political in nature.
+</p>
+
+<p>
+Governments, or more specifically the transparency and open data arms within them, think they are on the right track with data publication and it is up to us, the consumers of that data, to make them painfully aware of the shortcomings of what is currently being published.
+</p>
+
+<p>
+We can't do this only by coding software. We can develop some solutions in software, that need to be leveraged by civic tech (etc.) to show their governments (at all levels) and serve as the basis for a discussion of change - a change to value data quality as part of the data publication process.
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org84ce933">
+<h3 id="org84ce933">Non-tech</h3>
+<i class="fa fa-users" aria-hidden="true"></i>
+
+</section>
+<section id="slide-orgf18ee98">
+<h4 id="orgf18ee98"></h4>
+<ul>
+<li>Engage in direct dialogue with government on the usability of open data</li>
+<li>Build quality metrics into the tools and processes that incentivise government</li>
+<li>In some situations, outright reject data as open data based on quality grounds alone</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li>Data wrangling effort, high level of entry for insight.</li>
+<li>From NGO initiatives like the Open Data Index, through to government partnerships like the OGP.</li>
+<li>As a step in bringing quality into mainstream discourse on open data, identify certain types of open data that MUST meet certain quality standards. Fiscal data could be one.</li>
+
+</ol>
+
+</aside>
+
+</section>
+<section id="slide-org5ddd51a">
+<h3 id="org5ddd51a">Tech</h3>
+<i class="fa fa-cubes" aria-hidden="true"></i>
+
+</section>
+<section id="slide-orgf3efee0">
+<h4 id="orgf3efee0">Data validation</h4>
+<ul>
+<li>Structural and schematic checks</li>
+<li>Semantic and checks</li>
+<li>Reports actionable by non-technical users</li>
+<li><a href="https://github.com/frictionlessdata/goodtables-py">goodtables</a> and <a href="https://github.com/frictionlessdata/data-quality-spec">Data Quality Spec</a></li>
+
+</ul>
+
+</section>
+<section id="slide-orgde33f65">
+<h4 id="orgde33f65">Quality dashboards</h4>
+<ul>
+<li>Log data quality over collections of data</li>
+<li>Track change over time</li>
+<li>Target actors in policy and implementation</li>
+<li><a href="https://github.com/frictionlessdata/data-quality-dashboard">Data Quality Dashboard</a></li>
+
+</ul>
+
+</section>
+<section id="slide-orga2c7099">
+<h4 id="orga2c7099">Future portals</h4>
+<ul>
+<li>More emphasis on publication workflows</li>
+<li>More emphasise on internal visibility into "data health"</li>
+<li>Automation/controls around publishing based on health checks</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ol>
+<li><b>More emphasis on the means of production</b>.</li>
+<li>This is not a complete list - only things in reference to data quality.</li>
+
+</ol>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org7273e1d">
+<h2 id="org7273e1d">Thanks</h2>
+<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+</section>
+</section>
+</div>
+</div>
+<script src="/assets/vendor/reveal/lib/js/head.min.js"></script>
+<script src="/assets/vendor/reveal/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: true,
+center: true,
+slideNumber: false,
+rollingLinks: true,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: '/assets/vendor/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: '/assets/vendor/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: '/assets/vendor/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: '/assets/vendor/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: '/assets/vendor/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
