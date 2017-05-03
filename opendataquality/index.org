@@ -420,6 +420,12 @@ In this "data sourcing" stage we experienced the next step of data quality - whi
 
 ** 
 
+- Extremely bad data issues within single files
+- No consistency across data actually published, making comparison impossible
+- Much data not actually published in machine-readable formats
+
+** 
+
 - [[http://subsidystories.eu][Subsidy Stories EU app]]
 - [[https://github.com/os-data/eu-structural-funds/][Data collection and processing code]]
 - [[http://openbudgets.eu/assets/resources/Report-OpenBudgets-ESIF%20Data-Quality-Index.pdf][Data quality report]]
@@ -610,7 +616,6 @@ We can't do this only by coding software. We can develop some solutions in softw
 *** Data validation
 
 - Structural and schematic checks
-- Semantic and checks
 - Reports actionable by non-technical users
 - [[https://github.com/frictionlessdata/goodtables-py][goodtables]] and [[https://github.com/frictionlessdata/data-quality-spec][Data Quality Spec]]
 
